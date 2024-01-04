@@ -1,0 +1,193 @@
+*,/*todos los elementos*/
+  *::before, /*para asegurar que los elementos generados por CSS de forma dinámica también sigan estas reglas*/
+  *::after {
+    box-sizing: border-box; /* sin esta regla, el ancho y alto de un elemento se calcula sin tener en cuenta el relleno y el borde*/
+    margin: 0;  /* para garantizar que no haya márgenes o rellenos no deseados aplicados de forma predeterminada por el navegador*/
+    padding: 0;
+}
+
+:root{
+    --morado: #6c2c6c;
+    --color-fuente: #c6afb7;
+    --negro: black;
+    --negro2: #1c1c1c;
+    --blanco: white;
+    --gris: grey;
+    --gris-claro: lightgray;
+}
+
+/*COLORES*/
+.header-title i, .first-section, .posts article button, .third-section i{
+    background-color: var(--morado);
+}
+
+.header-title i, .posts article button{
+    border: 1px solid var(--morado);
+}
+
+.header-title i, .first-section h2, .posts article button, .title-third-section h2, .third-section i {
+    color: var(--blanco);
+}
+
+.header-title p, header a{
+    color: var(--negro2);
+}
+
+.title-second-section p, .posts article p, .title-third-section p, .third-section hr, footer p {
+    color: var(--gris);
+}
+
+.third-section, footer{
+    background-color: var(--negro);
+}
+
+footer span{
+    color: var(--gris-claro);
+}
+
+
+/*HEADER------------------------------------------------------------------------------*/
+header{
+    height: 30em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.header-title i{
+    margin-bottom: 0.5em;
+    border-radius: 50%;
+    padding: 1em;
+}
+
+.header-title h1{
+    color: var(--morado);
+    font-size: 4em;
+}
+
+.header-title p{
+    font-size: small;
+    margin-bottom: 5em;
+}
+
+header a{
+    text-decoration: none;
+}
+
+nav a{
+    margin-right: 3em;
+}
+
+.first-nav{
+    border: 1px solid var(--negro2);
+    border-radius: 5px;
+    padding: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+/*MAIN---------------------------------------------------------------------------------*/
+/*FIRST SECTION------------------------------------------------------------------------*/
+.first-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 30em;
+}
+
+section h2{
+    font-size: xx-large;
+}
+
+.first-section h2{
+    padding: 1em;
+}
+
+.first-section p{
+    color: var(--color-fuente);
+    padding-right: 8em;
+    padding-left: 8em;
+}
+
+/*SECOND SECTION------------------------------------------------------------------------*/
+.second-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 40em;
+}
+
+.title-second-section p{
+    margin-right: 10em;
+    margin-left: 10em;
+}
+
+.posts{
+    display: flex;
+    flex-direction: row;
+    padding: 3em;
+}
+
+.posts article{
+    padding: 1em;
+    margin-right: 2em;
+    margin-left: 2em;
+}
+
+.posts article i{
+    padding: 1em;
+}
+
+.posts article h6{
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+.posts article p{
+    margin-bottom: 2em;
+}
+
+.posts article button{
+    padding: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*THIRD SECTION------------------------------------------------------------------------*/
+.third-section{
+    height: 25em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.third-section p{
+    margin-bottom: 3em;
+}
+
+.third-section i{
+    border-radius: 50%;
+    padding: 0.4em; 
+    width: 1.8em; 
+    height: 1.8em;
+    cursor: pointer;
+}
+
+.third-section hr{
+    margin-top: 5em;
+    width: 75%;
+}
+
+/*FOOTER-------------------------------------------------------------------------------*/
+footer{
+    text-align: center;
+    height: 4em;
+}
